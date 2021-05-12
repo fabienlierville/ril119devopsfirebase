@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288411125091",
+    "project_id": "cesi-a7d61",
+    "storage_bucket": "cesi-a7d61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288411125091:android:ec95eca03c4e79dc14ff56",
+        "android_client_info": {
+          "package_name": "com.cesi.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288411125091-829qk3qrn897qvj1fasj3u4khg0h1k8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4LKE90Ns4gFkGOk0yf6Hq4uCgJS6oxRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288411125091-829qk3qrn897qvj1fasj3u4khg0h1k8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
