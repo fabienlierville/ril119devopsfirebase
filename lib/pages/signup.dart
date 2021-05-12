@@ -69,7 +69,7 @@ class _PageSignupState extends State<PageSignup> {
               ElevatedButton(
                   onPressed: (){
                     if(_formKey.currentState.validate()){
-                      //Todo Register
+                      registerToFb();
                     }
                   },
                   child: Text("Valider")
@@ -82,7 +82,18 @@ class _PageSignupState extends State<PageSignup> {
   }
 
   void registerToFb(){
-
+    firebaseAuth
+      .createUserWithEmailAndPassword(
+        email: mailController.text,
+        password: passController.text
+    ).then((result) {
+      //Todo RealtimeDatabase rengistrer nameController
+      print(result);
+      //Todo Navigator.pop
+    }).catchError((err){
+      print(err);
+      //TOdo showdialog AlertDialog
+    });
 
   }
 
