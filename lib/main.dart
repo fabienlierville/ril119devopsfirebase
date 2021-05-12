@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/pages/page_admob.dart';
+import 'package:flutter_firebase/pages/page_login.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() async{
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: PageAdMob(),
+      home: PageLogin(),
     );
   }
 }

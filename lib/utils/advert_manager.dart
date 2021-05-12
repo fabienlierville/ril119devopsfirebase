@@ -3,17 +3,6 @@ import 'dart:io';
 
 class AdvertManager{
 
-  //Récupération de l'ID applicatif dans AdMob
-  String getAppId(){
-    if(Platform.isIOS){
-      return "ca-app-pub-7820557864534882~7472540926";
-    }else if(Platform.isAndroid){
-      return "ca-app-pub-7820557864534882~7472540926";
-    }
-    return null;
-  }
-
-
   String getBannerAdUnitId() {
     if (Platform.isIOS) {
       return 'ca-app-pub-3940256099942544/2934735716';
@@ -25,9 +14,9 @@ class AdvertManager{
 
   String getInterstitialAdUnitId() {
     if (Platform.isIOS) {
-      return 'ca-app-pub-3940256099942544/8691691433';
+      return 'ca-app-pub-7820557864534882/3058459678';
     } else if (Platform.isAndroid) {
-      return 'ca-app-pub-3940256099942544/8691691433';
+      return 'ca-app-pub-7820557864534882/3058459678';
     }
     return null;
   }
