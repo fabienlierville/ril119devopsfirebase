@@ -37,5 +37,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+            android:name="com.google.android.gms.ads.com.cesi.flutter_firebase"
+            android:value="ca-app-pub-7820557864534882~7472540926"
+            />
     </application>
 </manifest>
