@@ -10,6 +10,12 @@ class PageAdMob extends StatefulWidget {
 class _PageAdMobState extends State<PageAdMob> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Publicité"),
+      ),
+      body: Center(),
+
+    );
   }
 }
