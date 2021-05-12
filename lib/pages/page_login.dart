@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/pages/signup.dart';
 import 'package:flutter_firebase/utils/advert_manager.dart';
@@ -11,10 +12,12 @@ class PageLogin extends StatefulWidget {
 }
 
 class _PageLoginState extends State<PageLogin> {
-
+  User user = FirebaseAuth.instance.currentUser;
 
   @override
   Widget build(BuildContext context) {
+    print(user);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Login mail/mdp"),
@@ -32,10 +35,23 @@ class _PageLoginState extends State<PageLogin> {
           ),
           ElevatedButton.icon(
             onPressed: (){
-              //Todo
+              LoginToFb();
             },
             icon: Icon(Icons.mail),
             label: Text("Se connecter avec un compte mail"),
+          ),
+          ElevatedButton.icon(
+            onPressed: (){
+              FirebaseAuth auth = FirebaseAuth.instance;
+              auth.signOut().then((_) {
+                print("Logout OK");
+                setState(() {
+
+                });
+              });
+            },
+            icon: Icon(Icons.mail),
+            label: Text("Logout"),
           ),
         ]
       ),
@@ -43,6 +59,16 @@ class _PageLoginState extends State<PageLogin> {
     );
   }
 
+
+  void LoginToFb(){
+    FirebaseAuth.instance
+        .signInWithEmailAndPassword(
+        email: "test@test.com",
+        password: "test1234"
+    ).then((value) {
+      print(value);
+    });
+  }
 
 
 }
